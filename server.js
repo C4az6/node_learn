@@ -10,8 +10,9 @@ server.on('listening', () => {
 
 server.on('connection', socket => {
   console.log('有新连接了');
-  // 接收客户端发送过来的数据
+  // 接收客户端发送过来的数据，注意是从socket对象里面调用on方法监听data事件来获取参数的
   socket.on('data', data => {
     console.log(data.toString());
   })
+  socket.write('hello client');
 })

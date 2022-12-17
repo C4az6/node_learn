@@ -7,4 +7,7 @@ socket.on('connect', () => {
 })
 
 // 写入数据
-socket.write('2022-12-18 02:26:08');
+socket.write('hello server');
+socket.on('data', data => {
+  console.log(data.toString());
+})
