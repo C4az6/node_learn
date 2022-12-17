@@ -1,0 +1,23 @@
+process：
+1.process.argv  获取node命令后面的参数
+2.process.execArgv  获取文件和命令之间的参数，是一个数组
+3.process.execPath  获取当前node执行文件的绝对路径
+4.process.env 获取node执行环境相关的信息
+5.process.cwd() 返回当前文件执行的目录
+6.process.nextTick  
+
+
+宏任务：主线程中按序执行，一个task完成，下一个task执行。
+  1、回调函数
+  2、XHR
+  3、setTimeout
+  4、setInterval
+  5、U/I rending
+  6、I/O
+  7、setImmidate(node中独有)
+
+微任务：task完成之后，插入进来的东西；
+  1.promise    
+  2.process.nextTick(node独有)
+
+node中的事件循环机制
